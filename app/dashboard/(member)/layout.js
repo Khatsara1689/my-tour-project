@@ -24,7 +24,7 @@ function MemberSidebar() {
         <ul>
           {menuItems.map((item) => (
             <li key={item.name}>
-              <Link href={item.href} className={`flex items-center gap-3 px-4 py-3 my-1 rounded-lg transition-colors ${ pathname === item.href ? 'bg-gray-700' : 'hover:bg-gray-700/50' }`}>
+              <Link href={item.href} className={`flex items-center gap-3 px-4 py-3 my-1 rounded-lg transition-colors ${ pathname.startsWith(item.href) ? 'bg-gray-700' : 'hover:bg-gray-700/50' }`}>
                 <item.icon size={20} />
                 <span>{item.name}</span>
               </Link>
